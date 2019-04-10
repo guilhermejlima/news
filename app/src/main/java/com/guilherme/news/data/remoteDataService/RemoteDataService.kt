@@ -6,10 +6,7 @@ import retrofit2.Call
 
 class RemoteDataService {
 
-     fun callNews(
-        newsApiClient: newsApi,
-        token: String
-    ): Call<ResponseModel> {
-        return newsApiClient.getListofNews("us", token)
+     fun callNews(newsApiClient: newsApi, token: String,source:String): Call<ResponseModel> {
+        return newsApiClient.getListofNews(source, token)
     }
 }
