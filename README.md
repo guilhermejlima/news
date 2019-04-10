@@ -1,7 +1,7 @@
-## News App
+# News App
 
 
-# Using: 
+### Using: 
 
 - Kotlin
 - Androidx
