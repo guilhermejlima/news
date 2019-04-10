@@ -14,6 +14,7 @@ import retrofit2.Response
 class NewsListPresenter(private val view: NewsListInterface.View) {
 
     fun onCreateCalled(repository: Repository, apiService: newsApi, context: Context){
+        view.changeTheNameOfActionBarTitle("BBC")
         view.createLayoutManager()
         callNews(repository, apiService, context)
     }

@@ -40,4 +40,9 @@ class NewsListActivity : AppCompatActivity(), NewsListInterface.View {
         val linearLayoutManager = LinearLayoutManager(this)
         activity_main_rv.layoutManager = linearLayoutManager
     }
+
+    override fun changeTheNameOfActionBarTitle(title: String) {
+        supportActionBar?.title = title
+
+    }
 }

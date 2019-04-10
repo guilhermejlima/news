@@ -9,6 +9,8 @@ interface NewsListInterface {
         fun createAdapter(articleList:List<Article>, context: Context)
 
         fun createLayoutManager()
+
+        fun changeTheNameOfActionBarTitle(title:String)
     }
 
 }
