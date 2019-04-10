@@ -2,7 +2,7 @@ package com.guilherme.news.data.model
 
 import com.google.gson.annotations.SerializedName
 
-class ResponseModel(
+class ResponseData(
     @SerializedName("articles")
     val articles: List<Article>,
     @SerializedName("status")
