@@ -37,16 +37,17 @@ class NewsListPresenter(private val view: NewsListInterface.View): CoroutineScop
                     try {
                         if(call.isSuccessful){
                             val articleList = call.body()?.articles
-                            if (articleList == null) {
-                                Log.e("ERROR","List is null")
-
-                            } else {
-                                if (!articleList.isNotEmpty()) {
-                                    Log.e("ERROR","List is empty")
+                            if (articleList != null) {
+                                if (articleList.isNotEmpty()) {
+                                    view.createAdapter(articleList,context)
 
                                 } else {
-                                    view.createAdapter(articleList,context)
+                                    Log.e("ERROR","List is empty")
                                 }
+
+                            } else {
+                                Log.e("ERROR","List is null")
+
                             }
                         }else{
                         }
