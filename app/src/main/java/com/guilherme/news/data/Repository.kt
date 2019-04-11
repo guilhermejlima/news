@@ -1,10 +1,11 @@
 package com.guilherme.news.data.remoteDataService
 
 import com.guilherme.news.data.model.ResponseData
-import retrofit2.Call
+import kotlinx.coroutines.Deferred
+import retrofit2.Response
 
 class Repository(private val remoteDataService: RemoteDataService) {
-    fun callNews(newsApiClient: newsApi, token: String,source:String): Call<ResponseData> {
+    suspend fun callNews(newsApiClient: newsApi, token: String,source:String): Deferred<Response<ResponseData>> {
         return remoteDataService.callNews(newsApiClient, token, source)
     }
 
